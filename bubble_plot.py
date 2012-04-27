@@ -6,23 +6,19 @@ import pandas
 
 def plot_without_pandas():
 
-    x, y, color, area, names = [], [], [], [], []
+    data = []
 
     for row in islice(csv.reader(urlopen('http://datasets.flowingdata.com/crimeRatesByState2005.csv')), 2, None):
 
         # fields are state, murder, forcible_rape, robbery, aggravated_assault, burglary, larceny_theft, motor_vehicle_theft, population
 
-        x.append(float(row[1])) # murder
-        y.append(float(row[5])) # burglary
-
-        color.append(float(row[6])) # larceny
-        area.append(sqrt(int(row[8]))) # population
-
-        names.append(row[0]) # state
+        data.append([row[i] for i in[1, 5, 6, 8]])
 
         text(row[1], row[5], row[0], size=11, horizontalalignment='center')
 
-    sct = scatter(x, y, c=color, s=area, linewidths=2, edgecolor='w')
+    data = zip(*data)
+
+    sct = scatter(map(float, data[0]), map(float, data[1]), c=map(float, data[2]), s=sqrt(map(int, data[3])), linewidths=2, edgecolor='w')
 
     sct.set_alpha(0.75)
 
