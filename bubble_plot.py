@@ -12,7 +12,7 @@ def plot_without_pandas():
 
         # fields are state, murder, forcible_rape, robbery, aggravated_assault, burglary, larceny_theft, motor_vehicle_theft, population
 
-        data.append([row[i] for i in[1, 5, 6, 8]])
+        data.append([row[i] for i in [1, 5, 6, 8]])
 
         text(row[1], row[5], row[0], size=11, horizontalalignment='center')
 
