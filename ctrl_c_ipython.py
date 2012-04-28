@@ -7,7 +7,7 @@ def main():
 
     for i in xrange(1000000000):
         try:
-            sleep
+            sleep(1)
         except KeyboardInterrupt:
             embed()
 
