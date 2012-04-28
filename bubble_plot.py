@@ -58,9 +58,9 @@ def text_plot_with_pandas():
 
     data = pandas.read_csv(urlopen('http://datasets.flowingdata.com/crimeRatesByState2005.csv'), skiprows=[1])
 
-    min_population = min(data['population'])
+    min_population = data['population'].min()
 
-    scale = (max(data['population']) - min_population) / 20.0
+    scale = (data['population'].max() - min_population) / 20.0
 
     ax = figure().add_subplot(111)
 
