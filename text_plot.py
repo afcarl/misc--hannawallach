@@ -4,6 +4,7 @@ from itertools import islice
 from pylab import axis, infty, show, subplot, text
 import pandas
 
+
 def plot_without_pandas():
 
     min_population = infty
@@ -34,9 +35,11 @@ def plot_without_pandas():
 
     show()
 
+
 def draw_text(row, scale, min_population):
 
     text(row['murder'], row['burglary'], row['state'], size=(row['population'] - min_population) / scale + 8, horizontalalignment='center')
+
 
 def plot_with_pandas():
 
@@ -56,6 +59,7 @@ def plot_with_pandas():
     axes.yaxis.set_visible(False)
 
     show()
+
 
 if __name__ == '__main__':
 

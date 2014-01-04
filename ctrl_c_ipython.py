@@ -1,6 +1,7 @@
 from IPython import embed
 from time import sleep
 
+
 def main():
 
     x = ['hello', 'world']
@@ -10,6 +11,7 @@ def main():
             sleep(1)
         except KeyboardInterrupt:
             embed()
+
 
 if __name__ == '__main__':
     main()

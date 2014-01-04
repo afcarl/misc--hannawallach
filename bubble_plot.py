@@ -4,6 +4,7 @@ from itertools import islice
 from pylab import axis, scatter, show, sqrt, text, xlabel, ylabel
 import pandas
 
+
 def plot_without_pandas():
 
     data = []
@@ -27,9 +28,11 @@ def plot_without_pandas():
 
     show()
 
+
 def draw_text(row):
 
     text(row['murder'], row['burglary'], row['state'], size=11, horizontalalignment='center')
+
 
 def plot_with_pandas():
 
@@ -45,6 +48,7 @@ def plot_with_pandas():
     ylabel('Burglaries per 100,000 population')
 
     show()
+
 
 if __name__ == '__main__':
 

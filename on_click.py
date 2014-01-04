@@ -1,6 +1,7 @@
 import numpy
 from matplotlib import pyplot
 
+
 def on_click(event):
 
     print 'Event: button=%d, x=%d, y=%d, xdata=%s, ydata=%s' % (event.button, event.x, event.y, event.xdata, event.ydata)
